@@ -1,0 +1,4 @@
+#ifndef INCLUDE_ITERATOR_H__
+#define INCLUDE_ITERATOR_H__
+
+#endif /* INCLUDE_ITERATOR_H__ */
