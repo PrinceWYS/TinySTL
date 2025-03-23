@@ -35,7 +35,7 @@ public:
     // 获取对象地址
     static T*               address(T& val);
     // 获取可分配 T 类型对象的最大数目
-    // static size_t           max_size();  // TODO: 后续将实现
+    static size_t           max_size();
     // 使用 T 类型的 allocator 为 U 类型分配内存
     template<typename U>
     struct rebind {
@@ -98,10 +98,10 @@ T* allocator<T>::address(T& val) {
     return (T*)(&val);
 }
 
-// template<typename T>
-// size_t allocator<T>::max_size() {
-//     return size_t(WINT_MAX / sizeof(T));
-// }
 
+template<typename T>
+size_t allocator<T>::max_size() {
+    return size_t(WINT_MAX / sizeof(T));
+}
 }
 #endif /* INCLUDE_ALLOCATOR_H__ */
