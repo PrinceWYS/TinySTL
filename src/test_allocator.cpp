@@ -4,7 +4,7 @@
 #include "type_traits.h"
 
 void test1() {
-    std::cout << "allocator test 01\n";
+    std::cout << "allocator test: vector\n";
     std::vector<int, tinystl::allocator<int>> vec(5, 5);
     for (auto &each : vec) {
         std::cout << each << " ";
@@ -14,7 +14,8 @@ void test1() {
 }
 
 int main() {
+    std::cout << "test_allocator start\n";
     test1();
-
+    std::cout << "test_allocator end\n";
     return 0;
 }
